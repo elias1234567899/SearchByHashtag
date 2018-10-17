@@ -1,0 +1,38 @@
+<div class="container spacer">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Hashtag Search</div>
+
+    <div class="panel-body">
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <div class="input-group col-xs-12" >
+              <span class="input-group-addon"><i>#</i></span>
+              <input  type="text" class="form-control" name="search" placeholder="Search&hellip;" [(ngModel)]="motCle">
+            </div>
+            <span class="input-group-btn">
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-striped table-hover spacer">
+        <tr>
+          <th>ID</th>
+          <th>Text</th>
+        </tr>
+        <tr *ngFor="let c of pagePostes">
+          <td>{{c.id}}</td>
+          <td>{{c.text}}</td>
+          <td><a (click)="detailsPoste(c.id)" class="clickable">Details</a></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+</div>

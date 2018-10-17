@@ -1,0 +1,23 @@
+<div class="container spacer">
+
+  <div class="panel panel-primary" *ngIf="mode==1">
+    <div class="panel-heading">Poste Details</div>
+    <div class="panel-body">
+      <div>
+
+        <div class="form-group">
+          <label class="control-label">ID :</label>
+          <input class="form-control" type="text" [(ngModel)]="poste.id" readonly="true"/>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Text :</label>
+          <input class="form-control" type="text" [(ngModel)]="poste.text" readonly="true"/>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
